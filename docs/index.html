@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>To-Do List</title>
+  <meta name="description" content="A To-Do List created as an assignment for HTML5 300B class">
+  <meta name="author" content="Minjeong Kweon">
+
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="./js/scripts.js" ></script>
+</head>
+
+<body>
+  <div class="jumbotron">
+    <div class="container">
+    <h2>Welcome to my to-do list!</h2>
+    </div>
+  </div>
+  <div class="container">
+    <div class="form-group">
+      <label for="task">Describe the task!</label>
+      <input class="form-control" type="text" name="task" id="description"/><br/>
+    </div>
+    <div class="form-group">
+      <label for="owner">Whose task is it?</label>
+      <div class="radio">
+        <label>
+          <input type="radio" name="owner" id="ownerOptions1" value="Megan" checked>
+          Megan
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="owner" id="ownerOptions2" value="John" >
+          John
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="difficulty">What is the level of difficulty?</label><br/>
+      <select class="form-control" name="difficulty" id="difficulty">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+    </div>
+    <button class="btn btn-default" onClick="addTask()">Submit</button>
+  </div>
+
+  <br/>
+  <div class="container">
+    <div id="chart_div">
+    </div>
+  </div>
+
+  <div class="container">
+    <ul id="to-do-list">
+    </ul>
+  </div>
+
+</body>
+
+</html>
