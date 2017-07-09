@@ -23,7 +23,7 @@ for(var i = 0; i < tasks.length; i++) {
 
 var addTask = function() {
   var description = $('#description').val();
-  var owner = $('input[name=owner]').val();
+  var owner = $('input[name=owner]:checked').val();
   var difficulty = $('#difficulty').val();
 
   var newTask = {
@@ -55,9 +55,10 @@ function drawChart() {
   for (var i = 0; i < tasks.length; i++) {
     if (tasks[i].owner == "John") johnTask++;
     if (tasks[i].owner == "Megan") meganTask++;
-    console.log("John: " + johnTask);
-    console.log("Megan: " + meganTask);
+
   }
+  console.log("John: " + johnTask);
+  console.log("Megan: " + meganTask);
 
   // Create the data table.
   var data = new google.visualization.DataTable();
